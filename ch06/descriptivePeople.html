@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Descriptive People</title>
+</head>
+<body>
+<h1>Descriptive People</h1>
+<script>
+	const descriptive = ['caring', 'kind', 'friendly', 'helpful', 'generous', 'compassionate', 'empathetic', 'sympathetic', 'thoughtful', 'considerate', 'loving', 'affectionate', 'warm', 'tender', 'tenderhearted', 'tender-hearted'];
+	
+	const randomItem = (array) => {
+		const randomIndex = Math.floor(Math.random() * array.length);
+		return array[randomIndex];
+	}
+	
+	const userName = prompt('What is your name?');
+	console.log(`You must be ${randomItem(descriptive)} ${userName}!`);
+
+</script>
+
+</body>
+</html>
