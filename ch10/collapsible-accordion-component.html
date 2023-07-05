@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Collapsible Accordion Component</title>
+	<style>
+		.active {
+			display: block !important;
+		}
+		
+		.myText {
+			display: none;
+		}
+		
+		.title {
+			background-color: #ddd;
+			font-size: 1.5em;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="title">Title #1</div>
+	<div class="myText">Just some text #1</div>
+	<div class="title">Title #2</div>
+	<div class="myText">Just some text #2</div>
+	<div class="title">Title #3</div>
+	<div class="myText">Just some text #3</div>
+</div>
+<script>
+	
+	const titles = document.querySelectorAll('.title');
+	
+	titles.forEach(function (title) {
+		title.addEventListener('click', function (event) {
+			const myText = this.nextElementSibling;
+			myText.classList.toggle('active');
+		});
+	});
+
+</script>
+</body>
+</html>

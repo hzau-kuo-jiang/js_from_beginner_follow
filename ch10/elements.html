@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1 style="color:pink;">Just an example</h1>
+<div class="example" id="one">Hi!</div>
+<div class="example" id="two">Hi!</div>
+<div class="something" id="three">Hi!</div>
+</body>
+<script>
+	
+	const something = document.querySelector('#three');
+	something.addEventListener('click', function (event) {
+		console.log(event)
+		console.log(event.target)
+		console.log(this)
+	});
+</script>
+</html>
+
