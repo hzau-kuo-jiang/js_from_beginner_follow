@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		body {
+			text-align: center;
+		}
+		
+		.keyboard {
+			margin: 1em;
+		}
+		
+		.letter {
+			cursor: pointer;
+			font-family: monospace;
+			font-size: 2rem;
+			font-weight: bold;
+			margin: .2em;
+			padding: .2em .4em;
+		}
+		
+		.letter:disabled {
+			cursor: not-allowed;
+		}
+		
+		.phrase {
+			font-size: 2rem;
+		}
+		
+		.phrase span {
+			border-bottom: 2px solid hsl(0, 0%, 80%);
+			display: inline-block;
+			margin: .2em;
+			padding: .2em .4em;
+		}
+		
+		.phrase .space {
+			border: none;
+		}
+		
+		.start {
+			cursor: pointer;
+			font-size: 2rem;
+			margin: 1em;
+			padding: .2em .4em;
+		}
+	
+	</style>
+	<title>Hangman Game</title>
+</head>
+<body>
+<header>
+	<h1>
+		Total Letters Left : <span id="left-letter">0</span>
+	</h1>
+</header>
+<main>
+	<div class="phrase" id="phrase">
+		<span>L</span>
+		<span>-</span>
+		<span>A</span>
+		<span>R</span>
+		<span>N</span>
+		<span class="space"></span>
+		<span>J</span>
+		<span>A</span>
+		<span>V</span>
+		<span>A</span>
+	</div>
+	<div class="keyboard" id="keyboard">
+		<div>
+			<input class="letter" type="button" value="Q">
+			<input class="letter" type="button" value="W">
+			<input class="letter" type="button" value="E">
+			<input class="letter" type="button" value="R">
+			<input class="letter" type="button" value="T">
+			<input class="letter" type="button" value="Y">
+			<input class="letter" type="button" value="U">
+			<input class="letter" type="button" value="I">
+			<input class="letter" type="button" value="O">
+			<input class="letter" type="button" value="P">
+		</div>
+		<div>
+			<input class="letter" type="button" value="A">
+			<input class="letter" type="button" value="S">
+			<input class="letter" type="button" value="D">
+			<input class="letter" type="button" value="F">
+			<input class="letter" type="button" value="G">
+			<input class="letter" type="button" value="H">
+			<input class="letter" type="button" value="J">
+			<input class="letter" type="button" value="K">
+			<input class="letter" type="button" value="L">
+		</div>
+		<div>
+			<input class="letter" type="button" value="Z">
+			<input class="letter" type="button" value="X">
+			<input class="letter" type="button" value="C">
+			<input class="letter" type="button" value="V">
+			<input class="letter" type="button" value="B">
+			<input class="letter" type="button" value="N">
+			<input class="letter" type="button" value="M">
+		</div>
+	</div>
+	<input class="start" id="start" type="button" value="start new game">
+</main>
+
+<script src="p3-html.js"></script>
+</body>
+</html>

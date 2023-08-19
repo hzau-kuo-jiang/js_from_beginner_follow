@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Complete JavaScript Course</title>
+	<style>
+		table {
+			border-spacing: 1.2rem;
+		}
+		
+		tr {
+			background-color: hsl(30, 100%, 50%);
+			cursor: pointer;
+			transition: background-color .2s ease;
+		}
+		
+		tr:hover {
+			background-color: hsl(30, 100%, 70%);
+		}
+		
+		tr:active,
+		tr.active {
+			background-color: hsl(53, 100%, 70%);
+		}
+		
+		td {
+			padding: .2rem .5rem;
+		}
+	</style>
+</head>
+<body>
+<div id="message">Complete JavaScript Course</div>
+<div>
+	<input id="addFriend" type="text">
+	<input id="addNew" type="button" value="Add Friend">
+</div>
+<table>
+	<tbody id="output"></tbody>
+</table>
+<script src="p2-html.js"></script>
+</body>
+</html>

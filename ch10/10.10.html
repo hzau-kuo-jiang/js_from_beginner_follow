@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<title>Complete JavaScript Course</title>
+	<style>
+	</style>
+</head>
+<body>
+<div id="message">Complete JavaScript Course</div>
+<div>
+	<label for="addItem"></label>
+	<input id="addItem" type="text">
+	<input id="addNew" type="button" value="Add to List">
+</div>
+<div id="output">
+	<h1>Shopping List</h1>
+	<ol id="sList"></ol>
+</div>
+<script>
+	const addItem = document.querySelector('#addItem');
+	const addNew = document.querySelector('#addNew');
+	const sList = document.querySelector('#sList');
+	
+	function addToList() {
+		const item = addItem.value;
+		const li = document.createElement('li');
+		li.innerHTML = item;
+		sList.appendChild(li);
+		addItem.value = '';
+		addItem.focus();
+	}
+	
+	addNew.addEventListener('click', addToList);
+</script>
+</body>
+</html>

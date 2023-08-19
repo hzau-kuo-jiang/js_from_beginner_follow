@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Complete JavaScript Course</title>
+</head>
+<body>
+<div id="message"></div>
+<div id="output"><!--
+	<h1>My Friends Table</h1>
+	<table>
+		<tr class="box" data-row="1" data-name="John" onclick="getData(this)">
+			<td>John</td>
+			<td>1</td>
+		</tr>
+		<tr class="box" data-row="2" data-name="Jane" onclick="getData(this)">
+			<td>Jane</td>
+			<td>2</td>
+		</tr>
+		...
+	</table> -->
+
+</div>
+<script>
+	const names = ['John', 'Jane', 'Mark', 'Bob'];
+	const message = document.querySelector('#message');
+	build();
+	
+	function build() {
+		const html = document.createElement('table');
+		html.innerHTML = '<h1>My Friends Table</h1>';
+		names.forEach((name, index) => {
+			html.innerHTML += `<tr class="box" data-row="${index + 1}" data-name="${name}" onclick="getData(this)"><td>${name}</td><td>${index + 1}</td></tr>`;
+		});
+		document.getElementById('output').appendChild(html);
+	}
+	
+	function getData(el) {
+		const temp = el.getAttribute('data-row');
+		const tempName = el.getAttribute('data-name');
+		message.innerHTML = `${tempName} is in row #${temp}`;
+	}
+
+</script>
+</body>
+</html>
